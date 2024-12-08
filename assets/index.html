@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldevan Vieira Tech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="h">
+    <div class="logo">
+      <img src="./Foto-do-Profissional.png" alt="" width="200px">
+    </div>
+    <nav class="desktop-menu">
+      <div class="buttons">
+        <a href="#h" class="btn">Home</a>
+        <a href="#services" class="btn">Serviços</a>
+        <a href="#sobre" class="btn">Sobre</a>
+        <a href="#agendamento-form" class="btn">Agendamento</a>
+      </div>
+      <!-- Ícones de redes sociais -->
+      <div class="icones"><a href="https://www.instagram.com/aldevanvieiratech?igshid=YjNmNGQ3MDY%3D" target="_blank"
+          rel="noopener noreferrer" class="social-btn">
+          <i class="fab fa-instagram"></i><img src="./icons8-instagram-48.png" alt="instagram">
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5588996664911&text&type=phone_number&app_absent=0" target="_blank"
+          rel="noopener noreferrer" class="social-btn">
+          <i class="fab fa-whatsapp"></i><img src="./icons8-whatsapp-48.png" alt="whatsapp">
+        </a>
+      </div>
+
+    </nav>
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="mobile-menu">
+      <a href="#h" class="btn">Home</a>
+      <a href="#services" class="btn">Serviços</a>
+      <a href="#sobre" class="btn">Sobre</a>
+      <a href="#agendamento-form" class="btn">Agendamento</a>
+    </nav>
+
+
+  </header>
+
+  <main>
+    <!-- Banner principal -->
+    <section class="banner">
+      <div class="banner">
+        <img src="./TÉCNICO DE INFORMÁTICA_20241023_102146_0000.png" alt="Banner Técnico de Informática"
+          class="banner-img" />
+        <!--<h1>Aldevan Vieira Tech</h1>
+        <a href="#services" class="btn">Conheça nossos serviços</a>-->
+      </div>
+
+    </section>
+
+    <!-- Serviços -->
+    <section id="services">
+      <h2 class="services">Serviços</h2>
+      <div class="services">
+        <div class="service-card" data-animate="fade">
+          <h3>Manutenção de Computadores</h3>
+          <img src="./Manutencao.png" alt="" width="200px">
+          <p>Diagnóstico, limpeza e reparos para o perfeito funcionamento do seu PC.</p>
+        </div>
+        <div class="service-card" data-animate="fade">
+          <h3>Reparo de Placas-mãe</h3><br>
+          <img src="./Notebook.png" alt="" width="200px">
+          <p>Especialista em soldagem e conserto de circuitos danificados.</p>
+        </div>
+        <div class="service-card" data-animate="fade">
+          <h3>Upgrade de Hardware</h3>
+          <img src="./Upgrade.png" alt="" width="200px">
+          <p>Melhore o desempenho do seu computador com upgrades sob medida.</p>
+        </div>
+        <div class="service-card" data-animate="fade">
+          <h3>Montagem de PCs Personalizados</h3>
+          <img src="./Montagem.png" alt="" width="200px">
+          <p>Monte o setup ideal para jogos ou trabalho.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <p data-animate="fade">Com experiência no mercado de tecnologia, oferecemos soluções personalizadas para atender
+        todas as suas necessidades de hardware e manutenção. Qualidade e confiança definem nosso trabalho!</p>
+    </section>
+
+    <!-- Agendamento -->
+    <section id="agendamento-form">
+      <h2>Agendamento</h2>
+      <form action="https://formcarry.com/s/6K5i19PRi2i"
+       method="POST" 
+       enctype="multipart/form-data"> 
+       <label for="nome">Nome:</label> 
+       <input id="nome" type="text" name="nome" required> 
+       <label for="email">E-mail:</label>
+        <input id="email" type="email" name="email" required> 
+        <label for="servico">Serviço:</label> <select id="servico"
+          name="servico">
+          <option value="manutencao">Manutenção de Computadores</option>
+          <option value="reparo">Reparo de Placas-mãe</option>
+          <option value="upgrade">Upgrade de Hardware</option>
+          <option value="montagem">Montagem de PCs</option>
+        </select> <label for="data">Data:</label> <input id="data" type="date" name="data" required> <button
+          type="submit" class="btn">Enviar</button> </form>
+    </section>
+  </main>
+
+  <section id="business-address">
+    <h2>Nosso Endereço</h2>
+    <div class="iframe-container">
+      <iframe id="address-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.9856339654957!2d-37.9874825!3d-4.9420326999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b979465d42a351%3A0x8ab76a30f3cce981!2sAldevan%20Vieira%20Tech!5e0!3m2!1spt-BR!2sbr!4v1732751875628!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Aldevan Vieira Tech. Todos os direitos reservados.</p>
+  </footer>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

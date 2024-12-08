@@ -1,0 +1,569 @@
+/* Animações */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pop {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Transições */
+  * {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Corpo */
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #6a0dad, #1e90ff);
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  header .logo img{
+    display: ruby;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+    animation: pop 1s ease-out;
+    border-radius: 100px;
+
+}
+  
+  header nav ul {
+    display: flex;
+    gap: 35px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #00ffff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Banner */
+  .banner {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: static;
+    overflow: hidden;
+  }
+  
+  .banner-img {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: fadeIn 1.5s ease-out;
+    opacity: 0.8; /* Transparência para destacar o texto */
+  }
+  
+  .banner h1 {
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+  
+  .banner .btn {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    z-index: 1;
+  }
+  
+  .banner .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  /* Serviços */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+  }
+  
+  .service-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  .service-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #00ffff;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    color: #ddd;
+  }
+  
+  /* Sobre */
+  #sobre {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeInLeft 1.5s ease-out;
+  }
+  
+  #sobre h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ff00ff;
+  }
+  
+  #sobre p {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+
+
+  #agendamento-form {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeInLeft 1.5s ease-out;
+  }
+  
+  #agendamento-form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ff00ff;
+  }
+  
+  #agendamento-form p {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  /*services*/
+  #services {
+    padding: 20px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeInLeft 1.5s ease-out;
+  }
+  
+  #services h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ff00ff;
+  }
+  
+  #services p {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  
+  /* Agendamento */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00ffff;
+  }
+  
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form button {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  form button:hover {
+    transform: scale(1.1);
+  }
+  /* Estilo Tecnológico para Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    color: #00ffff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  .btn:hover::before {
+    transform: scale(1);
+  }
+  
+  .btn:hover {
+    color: #000;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    border: 2px solid #000;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff, 0 0 60px rgba(255, 0, 255, 0.8);
+    transform: translateY(-3px);
+  }
+  
+  .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  }
+
+  /* Redes Sociais */
+  .social-icons {
+    display: -moz-marker;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    position: relative;
+    left: 70px;
+}
+
+  
+  .social-btn {
+    display: inline-grid;
+    padding: 0px 0px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    
+
+}
+.icones {
+  display: flex;
+  position: relative;
+  left: -3%;
+  margin: -45px 20px;
+  bottom: -142px;
+  position: relative;
+  gap: 10px;
+}
+.social-btn img {
+  width: 30px;
+  height: 30px;
+  
+}
+  
+  .social-btn i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 15px rgba(255, 0, 255, 0.8);
+  }
+  
+  [data-animate="fade"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+  }
+  /* Estilo para a seção de endereço */
+#business-address {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff59;
+  border-top: 2px solid #ddd;
+}
+
+#business-address h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container do iframe */
+.iframe-container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 15px rgba(255, 0, 255, 0.8);
+}
+
+/* Estilo para o iframe com animação */
+#iframe {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+/* Estilo base */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.desktop-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger-menu span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 10px;
+  z-index: 10;
+}
+
+.mobile-menu a {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+  }
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .banner-img {
+    position: absolute;
+    top: 271px;
+    left: 0px;
+    width: 100%;
+    height: 36%;
+    object-fit: cover;
+    z-index: -1;
+    animation: fadeIn 1.5s ease-out;
+    opacity: 0.8;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 23%;
+  right: 353px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 19%;
+  padding: 10px;
+  z-index: 10;
+}
+.hamburger-menu {
+  display: flex;
+  position: relative;
+  left: -320px;
+  bottom: -82px;
+}
+header .logo {
+  display: ruby;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+  animation: pop 1s ease-out;
+  border-radius: 100px;
+  position: relative;
+  left: -150px;  
+}
+header .logo img {
+  border-radius:100px ;
+}
+
+#services {
+  position: relative;
+  top: -210px;
+}
+iframe {
+  width: 70%;
+  height: 70%;
+}
+.hamburger-menu span.rotate-top {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger-menu span.rotate-bottom {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+.hamburger-menu span.fade-out {
+  opacity: 0;
+}
+}
+
+
+
+
